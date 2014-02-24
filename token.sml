@@ -17,7 +17,20 @@ val exp = [Digit(9), Operator(Plus,1), Digit(24), Operator(Div,2), Bracket(Left)
 
 
 exception EmptyStackException;
-
+(*
+fun toPost(l)
+	let
+		val stack_empty = isEmpty(stack);
+		val list_empty = isEmpty(list);
+	in
+		if stack_empty andalso list_empty then
+			return done
+		else if list_empty then
+			pop_stack()
+		else
+			case list of Digit(n)::rest 	 => 
+						 Bracket(Left)::rest =>
+	*)		
 
 
 
