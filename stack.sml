@@ -4,7 +4,7 @@ datatype stack = EmptyStack | Stack of token list
 
 fun pop(EmptyStack) = raise EmptyStackException
   | pop(Stack([]))  = raise EmptyStackException	
-  | pop(Stack([x])) = EmptyStack
+  | pop(Stack([break!])) = EmptyStack
   | pop(Stack (x :: xs)) = Stack(xs);
 
 fun push(EmptyStack,x)  = Stack (x::[])
