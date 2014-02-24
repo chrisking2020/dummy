@@ -4,7 +4,7 @@ datatype stack = EmptyStack | Stack of token list
 
 fun pop(EmptyStack) = raise EmptyStackException
   | pop(Stack([]))  = raise EmptyStackException	
-  | pop(Stack([x])) = EmptyStack
+  | pop(Stack([y])) = EmptyStack
   | pop(Stack (x :: xs)) = Stack(xs);
 
 fun push(EmptyStack,x)  = Stack (x::[])
@@ -16,6 +16,6 @@ fun top(EmptyStack) = raise EmptyStackException
   | top(Stack (x :: xs)) = x;
 
 fun hasNext(EmptyStack) = false
-  | hasNext(Stack([])) = false
+  (*| hasNext(Stack([])) = false*)
   | hasNext(Stack([x])) = true
   | hasNext(Stack(x::xs)) = true;
